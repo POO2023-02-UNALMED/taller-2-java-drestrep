@@ -19,7 +19,13 @@ public class Auto {
     public static int cantidadCreados;
     
     public int cantidadAsientos(){
-        return(asientos.length);
+        int c = 0;
+        for (Asiento asiento : asientos) {
+            if (asiento != null) {
+                c++;
+            }
+        }
+        return c;
     }
     public String verificarIntegridad(){
         for (Asiento asiento : asientos) {
